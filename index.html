@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReCell</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ReCell</h1>
+      <p class="subtitle">Battery Diagnostic Dashboard</p>
+    </header>
+
+    <section id="pack-summary" class="pack-summary">
+      <div>
+        <span class="label">Pack SoH</span>
+        <span id="pack-soh-value" class="value">--%</span>
+      </div>
+      <div>
+        <span class="label">Recommendation</span>
+        <span id="pack-recommendation-value" class="value">Waiting for test...</span>
+      </div>
+      <div>
+        <span class="label">Weakest cell</span>
+        <span id="pack-weakest-value" class="value">--</span>
+      </div>
+    </section>
+
+    <section class="cell-grid">
+      <div class="cell-card" id="cell-1"><h2>Cell 1</h2><div class="cell-soh">--%</div><div class="cell-recommendation">--</div></div>
+      <div class="cell-card" id="cell-2"><h2>Cell 2</h2><div class="cell-soh">--%</div><div class="cell-recommendation">--</div></div>
+      <div class="cell-card" id="cell-3"><h2>Cell 3</h2><div class="cell-soh">--%</div><div class="cell-recommendation">--</div></div>
+      <div class="cell-card" id="cell-4"><h2>Cell 4</h2><div class="cell-soh">--%</div><div class="cell-recommendation">--</div></div>
+    </section>
+
+    <script src="libs/socket.io.min.js"></script>
+    <script src="libs/arduino.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
